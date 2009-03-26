@@ -1,0 +1,41 @@
+== Welcome to Booknotes
+
+This program is designed for you to organize notes for your books or other publications, so it helps to organize research and bibliography.
+
+I also use this one to learn Ruby on Rails and seek the maximum use of standard programming of the framework. Thus, when is adding functions, I create them or use plugins that are of great use by the Rails community. This version use the "Restful Authentication" to provide a simple user control. Also use some helpers to units tests written by Nando Vieira.
+
+Thank you for your interest,
+
+José G. Eleudson Queiroz 
+eleudson@gmail.com
+www.eleudson.com.br
+Brazil
+
+== Data Model
+
+The model database consists of:
+1. Author, up to the authors of the publications.
+2. Editor, the publishing journal entries.
+3. publication, which should have an editor and one or more authors, and publication of specific information. Is not allowed two or more securities equal.
+
+All these scales are related to the table of users and RESTful Authentication screen appears only the information belonging to each user of the system.
+
+Related Publication we have:
+
+1. Review, a table to contain a record of the text summary for each publication. I chose this table because it avoids adding to a text field in the table pricipal publication and future can be added the possibility to have more of an abstract by title.
+2. Notes, for a title you can have several notes that, in my case, are small snippets of text or transcript of a story that will sound storing to support the writing of the texts of my research. For each note you can tell the first and last page of the note, or start or end time of recording or video.
+
+== Considerations of Access Control
+
+As the application was made for my personal use and people close to the Department of Informatics of the University Carlos III of Madrid, or friends, does not enable the function of athenticação by email of new users. I am asking that each person send me an email so I can create the login.
+But this is something that can be easily changed with the settings of the restful authentication.
+
+== Template
+
+Thank Willr Webdesign by providing a good template to use the Free Software community.
+
+== License
+
+This software is distributed with GPL license and has no guarantee for problems caused by its use.
+
+

@@ -1,0 +1,38 @@
+<% form_for(@publication) do |f| %>
+  <p>
+    <%= f.label :editor_id %><br />
+    <%= f.select :editor_id, @editores %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :isbn %><br />
+    <%= f.text_field :isbn %>
+  </p>
+  <p>
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label :media %><br />
+    <%= f.select :media, Publication::MEDIAS %>
+  </p>
+  <p>
+    <%= f.label :idiom %><br />
+    <%= f.text_field :idiom %>
+  </p>
+  <p>
+    <%= f.label :license %><br />
+    <%= f.text_field :license %>
+  </p>
+  <p>
+    <b>Authors</b><br />
+    <%= f.collection_select :author_ids, @authors, :id, :name, {}, :multiple => true %>
+  </p>
+  <p>
+    <%= f.submit button_name %>
+  </p>
+<% end %>
+

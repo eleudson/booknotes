@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+mickey:
+  name: Mickey Mouse 
+  user: quentin
+
+naruto:
+  name: Naruto San
+  user: quentin
+
+chang:
+  name: Jack Chang
+  user: quentin
+
+zorro:
+  name: Don Diego
+  user: quentin
+
+superman:
+  name: Clark Kent
+  user: quentin

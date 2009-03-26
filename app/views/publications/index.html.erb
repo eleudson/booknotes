@@ -1,0 +1,29 @@
+<h1>Listing publications</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Editor</th>
+    <th>Media</th>
+    <th>Idiom</th>
+    <th>Isbn</th>
+  </tr>
+
+<% for publication in @publications %>
+  <tr>
+    <td><%=h publication.title %></td>
+    <td><%=h publication.editor.name %></td>
+    <td><%=h publication.media %></td>
+    <td><%=h publication.idiom %></td>
+    <td><%=h publication.isbn %></td>
+    <td><%= link_to 'Notes', publication_notes_path(publication) %></td>
+    <td><%= link_to 'Show', publication %></td>
+    <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+    <td><%= link_to 'Destroy', publication, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New publication', new_publication_path %>

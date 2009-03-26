@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+mickey_gibi_note:
+  id: 1
+  publication: mickey_gibi
+  name: Mickey and Donald
+  init_page: 1
+  last_page: 1
+  body: Mickey was going to the Donald house
+
+pateta_gibi_note:
+  id: 2
+  publication: pateta_gibi
+  name: Pateta en la noria
+  init_page: 20
+  last_page: 25
+  body: La grande noria fue abajo con las trapalhadas de Pateta
+
+# naruto_manga_note is used in the create of the test helpers

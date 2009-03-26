@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-AU">
+
+  <head>
+    <title>BookNotes</title>
+    <meta http-equiv="content-type" content="application/xhtml; charset=UTF-8" />
+    <%= stylesheet_link_tag 'scaffold','style' %>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css" media="screen, print, projection" /> -->
+  </head>
+
+  <body>
+    <!--HEADER-->
+    <div id="header">
+      <!--LOGO-->
+      <div id="logo">
+        <h1>Booknotes</h1>
+        <h2>Organize your notes from books.</h2>
+      </div>
+      
+      <!--LOGIN-->
+      <div id="login_bar">
+        <p>
+          <%= render :partial => 'users/user_bar' %>
+        </p>  
+      </div>
+   
+      <!--TAB NAVIGATION-->
+      <div id="topnav">
+        <!--Use class="active" to show where user is -->
+        <%= show_tabs %>
+      </div>
+    </div> <!-- end HEADER -->
+
+
+    <!--MAIN CONTENT-->
+    <div id="content">
+      <p style="color: green"><%= flash[:notice] %></p>
+      <p style="color: #990000"><%= flash[:alert] %></p>
+
+      <%= yield  %>
+    </div>
+
+    <!--THE FOOTER-->
+    <div id="footer">
+      <p>Copyleft 2008 Eleudson Queiroz</p>
+      <p>Template of Copyright &copy; 2005 willr Webdesign</p>
+      &nbsp;
+    </div>
+  </body>
+</html>

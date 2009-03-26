@@ -1,0 +1,14 @@
+<p>
+  <b>Publication:</b>
+  <%=h @review.publication_id.to_s.rjust(5,'0') + ' - ' + @review.publication.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h word_wrap(@review.body, line_width = 80) %>
+</p>
+
+
+<%= link_to 'Edit', edit_publication_review_path(@publication) %> |
+<%= link_to 'Back', publication_path(@publication) %>
+

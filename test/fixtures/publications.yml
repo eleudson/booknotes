@@ -1,0 +1,41 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+mickey_gibi:
+  editor:   gibi
+  title:    The Mickey History 
+  isbn:     111111-ABC 
+  source:   www.disneyweb.com
+  media:    BOOK
+  idiom:    English
+  license:  Copyright
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  authors: mickey
+  user: quentin
+
+pateta_gibi:
+  editor:   gibi
+  title:    El Pateta en Disneyworld
+  isbn:     2222222-DEF 
+  source:   www.disneyworld.com
+  media:    CD
+  idiom:    Espanish
+  license:  LGPL
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  authors:  zorro, superman
+  user: quentin
+  
+naruto_manga:
+  editor:   manga 
+  title:    The great saga of Naruto 
+  isbn:     333333-GHI
+  source:   www.manganiponweb.net
+  media:    DVD
+  idiom:    English
+  license:  Creative Common
+  created_at: <%= Time.now %>
+  updated_at: <%= Time.now %>
+  authors:  naruto, chang
+  user: quentin
+

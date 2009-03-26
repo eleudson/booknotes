@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+mickey_gibi_review:
+  id: 1
+  publication: mickey_gibi
+  body: A wonderful history of Mickey in Australia
+
+pateta_gibi_review:
+  id: 2
+  publication: pateta_gibi
+  body: El atrapalhado Pateta de vacaciones en Disneyworld
+
+#naruto_manga_review is used in the create of the helper's test

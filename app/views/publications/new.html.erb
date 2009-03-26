@@ -1,0 +1,7 @@
+<h1>New publication</h1>
+
+<%= error_messages_for :publication %>
+
+<%= render :partial => @publication, :locals => {:button_name => "Create"} %>
+
+<%= link_to 'Back', publications_path %>

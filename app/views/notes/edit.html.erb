@@ -1,0 +1,8 @@
+<h1>Editing note</h1>
+
+<%= error_messages_for :note %>
+
+<%= render :partial => @note, :locals => { :buttom_name => "Update" } %>
+
+<%= link_to 'Show', [@publication, @note] %> |
+<%= link_to 'Back', publication_notes_path(@publication) %>

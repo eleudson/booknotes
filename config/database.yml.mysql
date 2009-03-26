@@ -1,0 +1,19 @@
+# MySQL
+
+login: &login
+  adapter: mysql
+  username: booknotes
+  password: senha1
+  host: localhost
+
+development:
+  <<: *login
+  database: booknotes_development
+
+test:
+  <<: *login
+  database: booknotes_test
+
+production:
+  <<: *login
+  database: booknotes_production

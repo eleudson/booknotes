@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+gibi:
+  name: Gibi Press
+  user_id: 1
+
+manga:
+  name: Manga Press
+  user_id: 1

@@ -1,0 +1,24 @@
+<h1>Welcome!</h1>
+
+<p>
+This program is designed for you to organize notes for your books or other publications, so it helps to organize research and bibliography.
+</p><br />
+<p>
+I also use this one to learn Ruby on Rails and seek the maximum use of standard programming framework.
+</p><br />
+<p>
+If you use it and not "login", send me an email (eleudson at lab.inf.uc3m.es) with your information that you send the data to access. This is because this is a software still in development and, therefore, WITHOUT WARRANTY OF USE OR MAINTENANCE OF STORED DATA.
+</p><br />
+<p>
+Soon the source files are in GitHub site for others to use this program and change the measure of their needs.
+</p><br />
+<p>
+Thank you for your interest,
+</p><br />
+<p>
+José G. Eleudson Queiroz
+</p><br />
+<% if !logged_in? -%>
+  <h3>To access this application please <%= link_to 'login', new_session_path %>.</h3>
+<% end -%>
+<br />

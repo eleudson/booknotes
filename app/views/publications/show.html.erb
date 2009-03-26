@@ -1,0 +1,44 @@
+<h3>Show Publication</h3>
+<br />
+<p>
+  <b>Title:</b>
+  <%=h @publication.title %>
+</p>
+
+<p>
+  <b>Editor:</b>
+  <%=h @publication.editor.name %>
+  <b>Isbn:</b>
+  <%=h @publication.isbn %>
+</p>
+
+<p>
+  <b>Source:</b>
+  <%=h @publication.source %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @publication.media %>
+  <b>Idiom:</b>
+  <%=h @publication.idiom %>
+  <b>License:</b>
+  <%=h @publication.license %>
+</p>
+
+<br />
+<%= link_to 'Edit', edit_publication_path(@publication) %> |
+<%= link_to 'Back', publications_path %> 
+<br />
+<br />
+
+<h3>Review</h3>
+<% if @publication.review.nil? -%>
+  <%= link_to 'Add a review', new_publication_review_path(@publication) %> | 
+<% else -%>
+  <p><%= h word_wrap(@publication.review.body, line_with = 80) %></p>
+  <br />
+  <%= link_to 'Edit Review', edit_publication_review_path(@publication) %> | 
+<% end -%>
+<%= link_to 'Back', publications_path %> 
+

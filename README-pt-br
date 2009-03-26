@@ -1,0 +1,44 @@
+== Bem vindo ao Booknotes
+
+Este programa é projetado para você organizar as notas de seus livros ou outras publicações, para ajuda a organizar pesquisa e bibliografia.
+
+Eu também uso ele para aprender Ruby on Rails e por isso busco utilizar o máximo de programação padrão do framework. Assim, quando estou adicionando funções, as crio ou utilizo plugins que são populares na comunidade Rails. Esta versão usar o plugin Restful Authentication para proporcionar um simples controle de usuário. Também utiliza alguns helpers de teste de unidades escritos por Nando Vieira.
+
+Obrigado pelo seu interesse,
+
+José G. Eleudson Queiroz
+www.eleudson.com.br
+eleudson@gmail.com
+Brasil
+
+== Modelo de dados
+
+O modelo de dados é composto de:
+
+1) Autor, que cadastra os autores das publicações.
+
+2) Editor, cadastros das editoras das publicações.
+
+3) Publicação, que deve ter um Editor e um ou vários Autores, além de informações específicas da publicação. Não é permitido dois ou mais títulos iguais.
+
+Todas estas tabelas estão relacionadas com a tabela de Usuários do Restful Authentication e na tela aparece apenas as informações pertencentes a cada usuário do sistema.
+
+Relacionado com Publicação temos ainda:
+
+1) Review, uma tabela para conter um registro de texto de resumo para cada publicação. Optei por acrescentar esta tabela porque evito por um campo de texto na tabela pricipal de publicação e futuramente pode ser acrescentado a possibilidade de ter mais de um resumo por título. 
+
+2) Notes, para um título você pode ter várias notas que, no meu caso, são pequenos trechos do texto ou transcrito de uma narração sonora que irei armazenando para apoiar a escrita dos textos de minhas pesquisas. Para cada nota pode-se informar as páginas inicial e final da anotação, ou tempo inicial ou final da gravação ou vídeo.
+
+== Considerações sobre o Controle de Acesso
+
+Como a aplicação foi feita para meu uso pessoal e de pessoas próximas do Departamento de Informática da Universidade Carlos III de Madrid, ou amigos, não habilitei a função de athenticação por email de novos usuários. No meu caso, estou pedindo que cada interessado me envie um email para que eu possa criar o login para nosso servidor.
+
+Mas isto é algo que pode ser facilmente mudado con as configurações do Restful Authentication.
+
+== Template
+
+Agradeço a Willr Webdesign por disponibilizar um bonito template para utilização da comunidade de Software Livre.
+
+== License
+
+Este software é distribuído com licensa GPL e não possue qualquer garantia para problemas ocasionados por seu uso.

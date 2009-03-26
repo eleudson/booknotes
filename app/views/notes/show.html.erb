@@ -1,0 +1,28 @@
+<h1>Show note</h1>
+<p>
+  <%= h 'Publication: ' + @publication.title %>
+</p>
+<br />
+
+<p>
+  <b>Name:</b>
+  <%=h @note.name %>
+</p>
+
+<p>
+  <b>Init page:</b>
+  <%=h @note.init_page %>
+</p>
+
+<p>
+  <b>Last page:</b>
+  <%=h @note.last_page %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @note.body %>
+</p>
+<br />
+<%= link_to 'Edit', edit_publication_note_path(@publication) %> |
+<%= link_to 'Back', publication_notes_path(@publication) %>

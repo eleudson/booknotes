@@ -1,0 +1,8 @@
+<h1>Editing editor</h1>
+
+<%= error_messages_for :editor %>
+
+<%= render :partial => @editor, :locals => { :button_name => 'Update' } %>
+
+<%= link_to 'Show', @editor %> |
+<%= link_to 'Back', editors_path %>

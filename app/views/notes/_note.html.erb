@@ -1,0 +1,25 @@
+<%= h 'Publication: ' + @publication.title %>
+
+<% form_for([@publication, @note]) do |f| %>
+
+ <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :init_page %><br />
+    <%= f.text_field :init_page %>
+  </p>
+  <p>
+    <%= f.label :last_page %><br />
+    <%= f.text_field :last_page %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit buttom_name %>
+  </p>
+<% end %>
+
