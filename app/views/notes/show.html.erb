@@ -21,8 +21,9 @@
 
 <p>
   <b>Body:</b>
-  <%=h @note.body %>
+  <%=h word_wrap(@note.body, line_width = 80) %>
 </p>
 <br />
 <%= link_to 'Edit', edit_publication_note_path(@publication) %> |
-<%= link_to 'Back', publication_notes_path(@publication) %>
+<%= link_to 'New note', new_publication_note_path(@publication) %> | 
+<%= link_to 'Back', publication_notes_path(@publication) %> 

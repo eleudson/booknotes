@@ -6,7 +6,7 @@
   </tr>
 
 <% for author in @authors %>
-  <tr>
+  <tr class="<%= cycle('tr0','tr1') %>">
     <td><%=h author.name %></td>
     <td><%= link_to 'Edit', edit_author_path(author) %></td>
     <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>

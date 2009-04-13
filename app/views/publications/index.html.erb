@@ -10,7 +10,7 @@
   </tr>
 
 <% for publication in @publications %>
-  <tr>
+  <tr class="<%= cycle('tr0','tr1') %>">
     <td><%=h publication.title %></td>
     <td><%=h publication.editor.name %></td>
     <td><%=h publication.media %></td>

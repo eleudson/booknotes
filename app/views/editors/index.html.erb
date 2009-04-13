@@ -6,7 +6,7 @@
   </tr>
 
 <% for editor in @editors %>
-  <tr>
+  <tr class="<%= cycle('tr0','tr1') %>">
     <td><%=h editor.name %></td>
     <td><%= link_to 'Edit', edit_editor_path(editor) %></td>
     <td><%= link_to 'Destroy', editor, :confirm => 'Are you sure?', :method => :delete %></td>

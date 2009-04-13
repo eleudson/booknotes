@@ -5,7 +5,6 @@ class Note < ActiveRecord::Base
   validates_presence_of :publication, :publication_id
   validates_numericality_of :publication_id, :only_integer => true
 
-  validates_presence_of :name
   validates_presence_of :init_page  
   validates_presence_of :last_page
   validates_presence_of :body

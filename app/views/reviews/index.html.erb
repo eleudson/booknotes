@@ -7,7 +7,7 @@
   </tr>
 
 <% for review in @reviews %>
-  <tr>
+  <tr class="<%= cycle('tr0','tr1') %>">
     <td><%=h review.publication %></td>
     <td><%=h review.body %></td>
     <td><%= link_to 'Show', review %></td>

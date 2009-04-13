@@ -1,19 +1,21 @@
 <h1>Listing notes</h1>
 
+<p>
+  <%= h 'Publication: ' + @publication.title %>
+</p>
+
 <table>
   <tr>
-    <th>Publication</th>
-    <th>Note name</th>
     <th>Init page</th>
     <th>Last page</th>
+    <th>Note</th>
   </tr>
 
 <% for note in @notes %>
-  <tr>
-    <td><%=h note.publication.title %></td>
-    <td><%=h note.name %></td>
+  <tr class="<%= cycle('tr0','tr1') %>">
     <td><%=h note.init_page %></td>
     <td><%=h note.last_page %></td>
+    <td><%=h truncate(note.body, :length => 70) %></td>
     <td><%= link_to 'Show', [@publication, note] %></td>
     <td><%= link_to 'Edit', [:edit, @publication, note] %></td>
     <td><%= link_to 'Destroy', [@publication, note], :confirm => 'Are you sure?', :method => :delete %></td>
