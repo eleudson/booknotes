@@ -4,7 +4,8 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.xml
   def index
-    @notes = @publication.notes.find(:all)
+    #@notes = @publication.notes.find(:all)
+    @notes = @publication.note.paginate :page => params[:page], :per_page => 15
 
     respond_to do |format|
       format.html # index.html.erb

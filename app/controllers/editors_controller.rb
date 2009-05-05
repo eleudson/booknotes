@@ -4,7 +4,7 @@ class EditorsController < ApplicationController
   # GET /editors
   # GET /editors.xml
   def index
-    @editors = Editor.find(:all, :conditions => ["user_id = ?", current_user.id])
+    @editors = Editor.paginate :page => params[:page], :per_page => 10, :conditions => ["user_id = ?", current_user.id]
 
     respond_to do |format|
       format.html # index.html.erb

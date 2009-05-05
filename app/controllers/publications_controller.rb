@@ -4,7 +4,7 @@ class PublicationsController < ApplicationController
   # GET /publications
   # GET /publications.xml
   def index
-    @publications = Publication.find(:all, :conditions => ["user_id = ?", current_user.id])
+    @publications = Publication.paginate :page => params[:page], :per_page => 15, :conditions => ["user_id = ?", current_user.id]
 
     respond_to do |format|
       format.html # index.html.erb

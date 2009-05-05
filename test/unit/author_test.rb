@@ -40,7 +40,7 @@ class AuthorTest < ActiveSupport::TestCase
   end
 
   test "should belongs to user" do
-    author = create(:name => "Author Inexist", :user_id => 100)
+    author = create(:name => "Author", :last_name => "Inexist", :user_id => 100)
     my_assert_associated author, "user"
   end
 
@@ -48,7 +48,8 @@ class AuthorTest < ActiveSupport::TestCase
 
   def create(options={})
     Author.create({
-      :name => "Flash Gordon",
+      :name => "Flash",
+      :last_name => "Gordon",
       :user_id   => users(:quentin).id 
     }.merge(options))
   end

@@ -2,17 +2,21 @@
 
 <table>
   <tr>
+    <th>Last Name</th>
     <th>Name</th>
   </tr>
 
 <% for author in @authors %>
   <tr class="<%= cycle('tr0','tr1') %>">
+    <td><%=h author.last_name %></td>
     <td><%=h author.name %></td>
     <td><%= link_to 'Edit', edit_author_path(author) %></td>
     <td><%= link_to 'Destroy', author, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @publications %>
 
 <br />
 

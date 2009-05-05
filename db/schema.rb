@@ -9,13 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090223230353) do
+ActiveRecord::Schema.define(:version => 20090505091948) do
 
   create_table "authors", :force => true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "last_name"
   end
 
   create_table "authors_publications", :id => false, :force => true do |t|
@@ -28,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20090223230353) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "city"
   end
 
   create_table "notes", :force => true do |t|
@@ -51,6 +53,9 @@ ActiveRecord::Schema.define(:version => 20090223230353) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
+    t.string   "issue"
+    t.string   "volume"
+    t.string   "publication_date"
   end
 
   create_table "reviews", :force => true do |t|

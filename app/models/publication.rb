@@ -27,4 +27,23 @@ class Publication < ActiveRecord::Base
   validates_uniqueness_of :title
   validates_numericality_of :editor_id, :only_integer => true, :greater_than => 0
   validates_numericality_of :user_id, :only_integer => true, :greater_than => 0
+
+  def bibliography_title
+    s = authors_list
+    s << ". #{publication_date}" unless publication_date.blank?
+    s << ". #{title}"
+    s << ". Issue: #{issue}" unless issue.blank?
+    s << ". Volume: #{volume}" unless volume.blank?
+    s << ". #{editor.city}" unless editor.city.blank?
+    s << ". #{editor.name}" unless editor.name.blank?
+  end
+
+  def authors_list
+    a = ""
+    self.authors.each do |author|
+      a << "; " unless a.blank?
+      a << "#{author.last_name}, #{author.name}" 
+    end
+    a
+  end
 end

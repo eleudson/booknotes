@@ -3,6 +3,8 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Issue</th>
+    <th>Volume</th>
     <th>Editor</th>
     <th>Media</th>
     <th>Idiom</th>
@@ -12,6 +14,8 @@
 <% for publication in @publications %>
   <tr class="<%= cycle('tr0','tr1') %>">
     <td><%=h publication.title %></td>
+    <td><%=h publication.issue %></td>
+    <td><%=h publication.volume %></td>
     <td><%=h publication.editor.name %></td>
     <td><%=h publication.media %></td>
     <td><%=h publication.idiom %></td>
@@ -23,6 +27,8 @@
   </tr>
 <% end %>
 </table>
+
+<%= will_paginate @publications %>
 
 <br />
 
